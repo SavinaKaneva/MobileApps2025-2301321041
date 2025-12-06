@@ -1,4 +1,4 @@
-package com.example.readingjournal // Твоят пакет
+package com.example.readingjournal
 
 import androidx.lifecycle.LiveData
 

@@ -1,4 +1,4 @@
-package com.example.readingjournal // <-- Твоят пакет
+package com.example.readingjournal
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 class UpdateActivity : AppCompatActivity() {
 
     private lateinit var mBookViewModel: BookViewModel
-    private lateinit var currentBook: Book // Тук ще пазим книгата, която редактираме
+    private lateinit var currentBook: Book
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,23 +20,33 @@ class UpdateActivity : AppCompatActivity() {
 
         mBookViewModel = ViewModelProvider(this)[BookViewModel::class.java]
 
-        // 1. Взимаме елементите от екрана
         val etTitle = findViewById<EditText>(R.id.etTitleUpdate)
         val etAuthor = findViewById<EditText>(R.id.etAuthorUpdate)
         val etPages = findViewById<EditText>(R.id.etPagesUpdate)
         val etRating = findViewById<EditText>(R.id.etRatingUpdate)
         val etReview = findViewById<EditText>(R.id.etReviewUpdate)
+
         val btnUpdate = findViewById<Button>(R.id.btnUpdate)
         val btnDelete = findViewById<Button>(R.id.btnDelete)
-
         val btnBack = findViewById<Button>(R.id.btnBack)
+        val btnShare = findViewById<Button>(R.id.btnShare)
+
+        if (intent.hasExtra("current_book")) {
+            currentBook = intent.getParcelableExtra("current_book")!!
+
+            etTitle.setText(currentBook.title)
+            etAuthor.setText(currentBook.author)
+            etPages.setText(currentBook.pages.toString())
+            etRating.setText(currentBook.rating.toString())
+            etReview.setText(currentBook.review)
+
+        }
+
         btnBack.setOnClickListener {
             finish()
         }
-        val btnShare = findViewById<Button>(R.id.btnShare)
-        // 2. Логика при натискане
+
         btnShare.setOnClickListener {
-            // Проверка дали имаме заглавие (за всеки случай)
             val title = etTitle.text.toString()
             val author = etAuthor.text.toString()
             val rating = etRating.text.toString()
@@ -49,20 +59,6 @@ class UpdateActivity : AppCompatActivity() {
             }
         }
 
-        // 2. Взимаме данните, които сме пратили от Главния екран
-        // (Използваме "Parcelable", който настроихме в Стъпка 13)
-        if (intent.hasExtra("current_book")) {
-            currentBook = intent.getParcelableExtra("current_book")!!
-
-            // Попълваме полетата с текущите данни
-            etTitle.setText(currentBook.title)
-            etAuthor.setText(currentBook.author)
-            etPages.setText(currentBook.pages.toString())
-            etRating.setText(currentBook.rating.toString())
-            etReview.setText(currentBook.review)
-        }
-
-        // 3. Логика за бутон ОБНОВИ
         btnUpdate.setOnClickListener {
             val title = etTitle.text.toString()
             val author = etAuthor.text.toString()
@@ -71,18 +67,16 @@ class UpdateActivity : AppCompatActivity() {
             val review = etReview.text.toString()
 
             if (title.isNotEmpty()) {
-                // Създаваме обновен обект, но запазваме старото ID!
                 val updatedBook = Book(currentBook.id, title, author, pages, rating, review)
 
                 mBookViewModel.updateBook(updatedBook)
                 Toast.makeText(this, "Успешно обновено!", Toast.LENGTH_SHORT).show()
-                finish() // Затваря екрана
+                finish()
             } else {
-                Toast.makeText(this, "Попълнете заглавие", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Попълнете поне заглавие", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // 4. Логика за бутон ИЗТРИЙ
         btnDelete.setOnClickListener {
             deleteUser()
         }
@@ -102,7 +96,6 @@ class UpdateActivity : AppCompatActivity() {
     }
 
     private fun shareBookReview(title: String, author: String, rating: String, review: String) {
-        // 1. Форматираме текста красиво
         val shareText = """
             📚 Прочетох книгата: $title
             ✍️ Автор: $author
@@ -114,14 +107,12 @@ class UpdateActivity : AppCompatActivity() {
             Изпратено от моя Reading Journal
         """.trimIndent()
 
-        // 2. Създаваме Intent за споделяне
         val sendIntent: Intent = Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(Intent.EXTRA_TEXT, shareText)
             type = "text/plain"
         }
 
-        // 3. Стартираме прозореца за избор (Chooser)
         val shareIntent = Intent.createChooser(sendIntent, "Сподели ревюто чрез:")
         startActivity(shareIntent)
     }

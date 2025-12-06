@@ -9,7 +9,11 @@
     <color name="bg_top">#F5F5F5</color>
     <color name="bg_bottom">#E0E0E0</color>
     <color name="card_bg">#FFF8E1</color>
-    <color name="btn_share_light">#8D6E63</color>
+
     <color name="btn_action_medium">#5D4037</color>
-    <color name="btn_delete_dark">#281815</color>
+
+    <color name="btn_update_light">#A1887F</color>
+    <color name="btn_share_darker">#5D4037</color>
+    <color name="btn_delete_dark">#3E2723</color>
+    <color name="btn_back_gray">#757575</color>
 </resources>

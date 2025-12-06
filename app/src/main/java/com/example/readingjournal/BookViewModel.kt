@@ -1,4 +1,4 @@
-package com.example.readingjournal // Твоят пакет
+package com.example.readingjournal
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -19,8 +19,6 @@ class BookViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun addBook(book: Book){
-        // viewModelScope.launch(Dispatchers.IO) означава:
-        // "Изпълни това действие на заден план, за да не блокираш екрана на потребителя"
         viewModelScope.launch(Dispatchers.IO) {
             repository.addBook(book)
         }

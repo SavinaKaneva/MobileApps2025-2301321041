@@ -19,18 +19,18 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:gravity="center"/>
 
         <EditText
             android:id="@+id/etTitleUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Заглавие"
+            android:hint="Заглавие на книгата"
             android:minHeight="48dp"
+            android:layout_marginBottom="12dp"
             android:textColor="@android:color/black"
             android:textColorHint="#606060"
-            android:autoHandwritingEnabled="false"
             android:fontFamily="sans-serif"/>
 
         <EditText
@@ -39,21 +39,21 @@
             android:layout_height="wrap_content"
             android:hint="Автор"
             android:minHeight="48dp"
+            android:layout_marginBottom="12dp"
             android:textColor="@android:color/black"
             android:textColorHint="#606060"
-            android:autoHandwritingEnabled="false"
             android:fontFamily="sans-serif"/>
 
         <EditText
             android:id="@+id/etPagesUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Страници"
+            android:hint="Брой страници"
             android:inputType="number"
             android:minHeight="48dp"
+            android:layout_marginBottom="12dp"
             android:textColor="@android:color/black"
             android:textColorHint="#606060"
-            android:autoHandwritingEnabled="false"
             android:fontFamily="sans-serif"/>
 
         <EditText
@@ -64,29 +64,46 @@
             android:inputType="number"
             android:maxLength="1"
             android:minHeight="48dp"
+            android:layout_marginBottom="12dp"
             android:textColor="@android:color/black"
             android:textColorHint="#606060"
-            android:autoHandwritingEnabled="false"
             android:fontFamily="sans-serif"/>
 
         <EditText
             android:id="@+id/etReviewUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ревю"
+            android:hint="Твоето мнение за книгата..."
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:lines="4"
             android:minHeight="48dp"
             android:layout_marginBottom="24dp"
             android:textColor="@android:color/black"
             android:textColorHint="#606060"
-            android:autoHandwritingEnabled="false"
             android:fontFamily="sans-serif"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Обнови информацията"
+            android:backgroundTint="@color/btn_update_light"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Сподели ревю"
+            android:backgroundTint="@color/btn_share_darker"
+            android:layout_marginBottom="12dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="12dp">
+            android:weightSum="2">
 
             <Button
                 android:id="@+id/btnBack"
@@ -94,36 +111,17 @@
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:text="Назад"
-                android:fontFamily="sans-serif"
-                android:backgroundTint="#757575"
+                android:backgroundTint="@color/btn_back_gray"
                 android:layout_marginEnd="8dp"/>
 
             <Button
-                android:id="@+id/btnUpdate"
+                android:id="@+id/btnDelete"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif"
-                android:text="Обнови"
-                android:backgroundTint="@color/btn_share_light"/>
+                android:text="Изтрий"
+                android:backgroundTint="@color/btn_delete_dark"/>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnShare"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Сподели ревюто"
-            android:fontFamily="sans-serif"
-            android:backgroundTint="@color/btn_action_medium"
-            android:layout_marginBottom="12dp"/>
-
-        <Button
-            android:id="@+id/btnDelete"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Изтрий книгата"
-            android:fontFamily="sans-serif"
-            android:backgroundTint="@color/btn_delete_dark"
-            android:layout_marginBottom="24dp"/>
     </LinearLayout>
 </ScrollView>

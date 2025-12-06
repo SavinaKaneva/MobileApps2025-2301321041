@@ -1,4 +1,4 @@
-package com.example.readingjournal // <-- ТВОЯТ ПАКЕТ
+package com.example.readingjournal
 
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +11,6 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     private var bookList = emptyList<Book>()
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        // Тук намираме елементите от custom_row.xml
         val titleTxt: TextView = itemView.findViewById(R.id.txtTitle)
         val authorTxt: TextView = itemView.findViewById(R.id.txtAuthor)
         val ratingTxt: TextView = itemView.findViewById(R.id.txtRating)
@@ -19,7 +18,6 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        // Тук "надуваме" (inflatе-ваме) дизайна custom_row
         return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))
     }
 
@@ -31,11 +29,9 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.ratingTxt.text = "${currentItem.rating}/5"
         holder.pagesTxt.text = "${currentItem.pages} стр."
 
-        // --- НОВ КОД: Клик върху реда ---
         holder.itemView.setOnClickListener {
             val intent = android.content.Intent(holder.itemView.context, UpdateActivity::class.java)
 
-            // Тук "пакетираме" книгата и я пращаме
             intent.putExtra("current_book", currentItem)
 
             holder.itemView.context.startActivity(intent)
@@ -46,7 +42,6 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         return bookList.size
     }
 
-    // Тази функция ще викаме, когато има промяна в базата данни
     fun setData(books: List<Book>){
         this.bookList = books
         notifyDataSetChanged()

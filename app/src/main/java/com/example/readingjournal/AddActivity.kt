@@ -1,4 +1,4 @@
-package com.example.readingjournal // <-- ВНИМАВАЙ ПАКЕТЪТ ДА Е ТВОЯТ
+package com.example.readingjournal
 
 import android.os.Bundle
 import android.widget.Button
@@ -15,22 +15,21 @@ class AddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
 
-        // 1. Инициализираме ViewModel-а
         mBookViewModel = ViewModelProvider(this)[BookViewModel::class.java]
 
-        // 2. Намираме елементите от екрана
         val etTitle = findViewById<EditText>(R.id.etTitle)
         val etAuthor = findViewById<EditText>(R.id.etAuthor)
         val etPages = findViewById<EditText>(R.id.etPages)
         val etRating = findViewById<EditText>(R.id.etRating)
         val etReview = findViewById<EditText>(R.id.etReview)
+
         val btnAdd = findViewById<Button>(R.id.btnAdd)
         val btnCancel = findViewById<Button>(R.id.btnCancel)
+
         btnCancel.setOnClickListener {
             finish()
         }
 
-        // 3. Какво става като натиснем бутона
         btnAdd.setOnClickListener {
             insertDataToDatabase(etTitle, etAuthor, etPages, etRating, etReview)
         }
@@ -47,19 +46,15 @@ class AddActivity : AppCompatActivity() {
         val review = etReview.text.toString()
 
         if (inputCheck(title, author, pagesText, ratingText)) {
-            // Преобразуваме числата
             val pages = pagesText.toInt()
             val rating = ratingText.toInt()
 
-            // Създаваме обект Книга
             val book = Book(0, title, author, pages, rating, review)
 
-            // Запазваме чрез ViewModel
             mBookViewModel.addBook(book)
 
             Toast.makeText(this, "Книгата е добавена!", Toast.LENGTH_LONG).show()
 
-            // Затваряме екрана и се връщаме назад
             finish()
         } else {
             Toast.makeText(this, "Моля попълнете всички полета.", Toast.LENGTH_LONG).show()
