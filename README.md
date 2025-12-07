@@ -54,4 +54,4 @@
 ## APK
 
 Инсталационният файл може да бъде изтеглен от тук:
-<a href="app/release/ReadingJournal.apk" download="ReadingJournal.apk">Свали ReadingJournal.apk</a>
+<a href="https://raw.githubusercontent.com/SavinaKaneva/MobileApps2025-2301321041/master/app/release/ReadingJournal.apk" download="ReadingJournal.apk">Свали ReadingJournal.apk</a>
