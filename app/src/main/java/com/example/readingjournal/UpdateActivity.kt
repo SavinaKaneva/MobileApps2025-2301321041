@@ -4,12 +4,12 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.cardview.widget.CardView
 
 class UpdateActivity : AppCompatActivity() {
 
@@ -33,11 +33,12 @@ class UpdateActivity : AppCompatActivity() {
         val btnBack = findViewById<Button>(R.id.btnBack)
         val btnShare = findViewById<Button>(R.id.btnShare)
 
-        val viewDefault = findViewById<View>(R.id.colorDefault)
-        val viewRed = findViewById<View>(R.id.colorRed)
-        val viewGreen = findViewById<View>(R.id.colorGreen)
-        val viewBlue = findViewById<View>(R.id.colorBlue)
-        val viewPurple = findViewById<View>(R.id.colorPurple)
+        // Намираме картите
+        val cardDefault = findViewById<CardView>(R.id.colorDefault)
+        val cardRed = findViewById<CardView>(R.id.colorRed)
+        val cardGreen = findViewById<CardView>(R.id.colorGreen)
+        val cardBlue = findViewById<CardView>(R.id.colorBlue)
+        val cardPurple = findViewById<CardView>(R.id.colorPurple)
 
         if (intent.hasExtra("current_book")) {
             currentBook = intent.getParcelableExtra("current_book")!!
@@ -54,11 +55,11 @@ class UpdateActivity : AppCompatActivity() {
             Toast.makeText(this, "Colour picked!", Toast.LENGTH_SHORT).show()
         }
 
-        viewDefault.setOnClickListener { pickColor(Color.parseColor("#FFF8E1")) }
-        viewRed.setOnClickListener { pickColor(Color.parseColor("#FFCDD2")) }
-        viewGreen.setOnClickListener { pickColor(Color.parseColor("#C8E6C9")) }
-        viewBlue.setOnClickListener { pickColor(Color.parseColor("#BBDEFB")) }
-        viewPurple.setOnClickListener { pickColor(Color.parseColor("#E1BEE7")) }
+        cardDefault.setOnClickListener { pickColor(Color.parseColor("#FFF8E1")) }
+        cardRed.setOnClickListener { pickColor(Color.parseColor("#FFCDD2")) }
+        cardGreen.setOnClickListener { pickColor(Color.parseColor("#C8E6C9")) }
+        cardBlue.setOnClickListener { pickColor(Color.parseColor("#BBDEFB")) }
+        cardPurple.setOnClickListener { pickColor(Color.parseColor("#E1BEE7")) }
 
         btnBack.setOnClickListener { finish() }
 
@@ -83,7 +84,7 @@ class UpdateActivity : AppCompatActivity() {
                 Toast.makeText(this, "Added successfully!", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                Toast.makeText(this, "Fill in the title.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Fill in the title", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -92,14 +93,14 @@ class UpdateActivity : AppCompatActivity() {
 
     private fun deleteUser() {
         val builder = AlertDialog.Builder(this)
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setPositiveButton("Да") { _, _ ->
             mBookViewModel.deleteBook(currentBook)
-            Toast.makeText(this, "Deleted successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Изтрито", Toast.LENGTH_SHORT).show()
             finish()
         }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Do you want to delete this?")
-        builder.setMessage("Are you sure?")
+        builder.setNegativeButton("Не") { _, _ -> }
+        builder.setTitle("Изтриване?")
+        builder.setMessage("Сигурни ли сте?")
         builder.create().show()
     }
 
@@ -110,6 +111,6 @@ class UpdateActivity : AppCompatActivity() {
             putExtra(Intent.EXTRA_TEXT, shareText)
             type = "text/plain"
         }
-        startActivity(Intent.createChooser(sendIntent, "Share:"))
+        startActivity(Intent.createChooser(sendIntent, "Сподели:"))
     }
 }

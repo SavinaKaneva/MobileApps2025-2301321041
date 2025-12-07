@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,8 +18,8 @@
             android:layout_height="wrap_content"
             android:text="Add book"
             android:textSize="48sp"
-            android:fontFamily="@font/dancing_script_medium"
             android:textColor="@color/journal_primary"
+            android:fontFamily="@font/dancing_script_medium"
             android:layout_marginBottom="16dp"
             android:gravity="center"/>
 
@@ -91,56 +92,71 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pick a color for the cover:"
+            android:text="Pick a colour for the cover (optional):"
             android:layout_marginBottom="8dp"
             android:textColor="#5D4037"
             android:fontFamily="sans-serif-medium"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginBottom="24dp">
 
-            <View
+            <androidx.cardview.widget.CardView
                 android:id="@+id/colorDefault"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/circle_shape"
-                android:backgroundTint="#FFF8E1"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="#BDBDBD"
                 android:layout_margin="8dp"/>
 
-            <View
+            <androidx.cardview.widget.CardView
                 android:id="@+id/colorRed"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/circle_shape"
-                android:backgroundTint="#FFCDD2"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#FFCDD2"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="#BDBDBD"
                 android:layout_margin="8dp"/>
 
-            <View
+            <androidx.cardview.widget.CardView
                 android:id="@+id/colorGreen"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/circle_shape"
-                android:backgroundTint="#C8E6C9"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#C8E6C9"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="#BDBDBD"
                 android:layout_margin="8dp"/>
 
-            <View
+            <androidx.cardview.widget.CardView
                 android:id="@+id/colorBlue"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/circle_shape"
-                android:backgroundTint="#BBDEFB"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#BBDEFB"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="#BDBDBD"
                 android:layout_margin="8dp"/>
 
-            <View
+            <androidx.cardview.widget.CardView
                 android:id="@+id/colorPurple"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/circle_shape"
-                android:backgroundTint="#E1BEE7"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#E1BEE7"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="#BDBDBD"
                 android:layout_margin="8dp"/>
         </LinearLayout>
 
