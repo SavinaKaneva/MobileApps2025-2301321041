@@ -15,10 +15,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Редактирай книга"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif"
+            android:text="Update Book Infoarmation"
+            android:textSize="48sp"
+            android:fontFamily="@font/dancing_script_medium"
+            android:textColor="@color/journal_primary"
             android:layout_marginBottom="16dp"
             android:gravity="center"/>
 
@@ -26,7 +26,7 @@
             android:id="@+id/etTitleUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Заглавие на книгата"
+            android:hint="Title"
             android:minHeight="48dp"
             android:layout_marginBottom="12dp"
             android:textColor="@android:color/black"
@@ -37,7 +37,7 @@
             android:id="@+id/etAuthorUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Автор"
+            android:hint="Author"
             android:minHeight="48dp"
             android:layout_marginBottom="12dp"
             android:textColor="@android:color/black"
@@ -48,7 +48,7 @@
             android:id="@+id/etPagesUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Брой страници"
+            android:hint="Page Number"
             android:inputType="number"
             android:minHeight="48dp"
             android:layout_marginBottom="12dp"
@@ -60,7 +60,7 @@
             android:id="@+id/etRatingUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Рейтинг (1-5)"
+            android:hint="Rating (1-5)"
             android:inputType="number"
             android:maxLength="1"
             android:minHeight="48dp"
@@ -73,7 +73,7 @@
             android:id="@+id/etReviewUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Твоето мнение за книгата..."
+            android:hint="Thoughts..."
             android:gravity="top|start"
             android:inputType="textMultiLine"
             android:lines="4"
@@ -83,11 +83,67 @@
             android:textColorHint="#606060"
             android:fontFamily="sans-serif"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Colour:"
+            android:layout_marginBottom="8dp"
+            android:textColor="#5D4037"
+            android:fontFamily="sans-serif-medium"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <View
+                android:id="@+id/colorDefault"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#FFF8E1"
+                android:layout_margin="8dp"/>
+
+            <View
+                android:id="@+id/colorRed"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#FFCDD2"
+                android:layout_margin="8dp"/>
+
+            <View
+                android:id="@+id/colorGreen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#C8E6C9"
+                android:layout_margin="8dp"/>
+
+            <View
+                android:id="@+id/colorBlue"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#BBDEFB"
+                android:layout_margin="8dp"/>
+
+            <View
+                android:id="@+id/colorPurple"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="#E1BEE7"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Обнови информацията"
+            android:text="Update"
             android:backgroundTint="@color/btn_update_light"
             android:layout_marginBottom="12dp"/>
 
@@ -95,7 +151,7 @@
             android:id="@+id/btnShare"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Сподели ревю"
+            android:text="Share..."
             android:backgroundTint="@color/btn_share_darker"
             android:layout_marginBottom="12dp"/>
 
@@ -110,7 +166,7 @@
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Назад"
+                android:text="Cancel"
                 android:backgroundTint="@color/btn_back_gray"
                 android:layout_marginEnd="8dp"/>
 
@@ -119,7 +175,7 @@
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Изтрий"
+                android:text="Delete"
                 android:backgroundTint="@color/btn_delete_dark"/>
         </LinearLayout>
 

@@ -5,14 +5,15 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
+@Entity(tableName = "book_table")
 @Parcelize
-@Entity(tableName = "books_table")
 data class Book(
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id: Int,
     val title: String,
     val author: String,
     val pages: Int,
     val rating: Int,
-    val review: String
-): Parcelable
+    val review: String,
+    val color: Int
+) : Parcelable

@@ -10,6 +10,7 @@ import androidx.room.Update
 
 @Dao
 interface BookDao {
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addBook(book: Book)
 
@@ -19,6 +20,6 @@ interface BookDao {
     @Delete
     suspend fun deleteBook(book: Book)
 
-    @Query("SELECT * FROM books_table ORDER BY id DESC")
+    @Query("SELECT * FROM book_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Book>>
 }
