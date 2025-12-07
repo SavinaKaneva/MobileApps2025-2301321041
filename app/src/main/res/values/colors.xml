@@ -8,10 +8,14 @@
     <color name="journal_accent">#8D6E63</color>
     <color name="bg_top">#F5F5F5</color>
     <color name="bg_bottom">#E0E0E0</color>
+
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#606060</color>
+    <color name="text_hint">#808080</color>
+    <color name="screen_background">#F5F5F5</color>
     <color name="card_bg">#FFF8E1</color>
-
+    <color name="stroke_color">#BDBDBD</color>
     <color name="btn_action_medium">#5D4037</color>
-
     <color name="btn_update_light">#A1887F</color>
     <color name="btn_share_darker">#5D4037</color>
     <color name="btn_delete_dark">#3E2723</color>

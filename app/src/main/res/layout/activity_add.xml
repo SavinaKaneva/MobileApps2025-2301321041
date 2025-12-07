@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".AddActivity"
-    android:background="@drawable/background_gradient">
+    android:background="@color/screen_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,60 +104,70 @@
             android:gravity="center"
             android:layout_marginBottom="24dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorDefault"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFF8E1"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="#9E9E9E"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorRed"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#FFCDD2"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="#9E9E9E"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorGreen"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#C8E6C9"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="#9E9E9E"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorBlue"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#BBDEFB"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="#9E9E9E"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorPurple"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#E1BEE7"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="#9E9E9E"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
         </LinearLayout>
 
         <LinearLayout

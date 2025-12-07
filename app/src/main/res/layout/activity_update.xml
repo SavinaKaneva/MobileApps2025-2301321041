@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".UpdateActivity"
-    android:background="@drawable/background_gradient">
+    android:background="@color/screen_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,8 +30,8 @@
             android:hint="Title"
             android:minHeight="48dp"
             android:layout_marginBottom="12dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#606060"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
             android:fontFamily="sans-serif"/>
 
         <EditText
@@ -41,8 +41,8 @@
             android:hint="Author"
             android:minHeight="48dp"
             android:layout_marginBottom="12dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#606060"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
             android:fontFamily="sans-serif"/>
 
         <EditText
@@ -53,8 +53,8 @@
             android:inputType="number"
             android:minHeight="48dp"
             android:layout_marginBottom="12dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#606060"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
             android:fontFamily="sans-serif"/>
 
         <EditText
@@ -66,8 +66,8 @@
             android:maxLength="1"
             android:minHeight="48dp"
             android:layout_marginBottom="12dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#606060"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
             android:fontFamily="sans-serif"/>
 
         <EditText
@@ -80,8 +80,8 @@
             android:lines="4"
             android:minHeight="48dp"
             android:layout_marginBottom="24dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#606060"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
             android:fontFamily="sans-serif"/>
 
         <TextView
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="Change colour:"
             android:layout_marginBottom="8dp"
-            android:textColor="#5D4037"
+            android:textColor="@color/text_secondary"
             android:fontFamily="sans-serif-medium"/>
 
         <LinearLayout
@@ -99,60 +99,70 @@
             android:gravity="center"
             android:layout_marginBottom="12dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorDefault"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#FFFFFF"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="@color/stroke_color"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorRed"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#FFCDD2"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="@color/stroke_color"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorGreen"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#C8E6C9"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="@color/stroke_color"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorBlue"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#BBDEFB"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="@color/stroke_color"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/colorPurple"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#E1BEE7"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#BDBDBD"
-                android:layout_margin="8dp"/>
+                app:strokeColor="@color/stroke_color"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
         </LinearLayout>
 
         <Button
@@ -160,6 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Update"
+            android:textColor="@color/white"
             android:backgroundTint="@color/btn_update_light"
             android:layout_marginBottom="12dp"/>
 
@@ -168,6 +179,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Share..."
+            android:textColor="@color/white"
             android:backgroundTint="@color/btn_share_darker"
             android:layout_marginBottom="12dp"/>
 
@@ -183,6 +195,7 @@
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:text="Cancel"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/btn_back_gray"
                 android:layout_marginEnd="8dp"/>
 
@@ -192,6 +205,7 @@
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:text="Delete"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/btn_delete_dark"/>
         </LinearLayout>
 
