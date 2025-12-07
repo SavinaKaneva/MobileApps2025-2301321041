@@ -1,0 +1,54 @@
+com.example.readingjournal.app-pngs-0 C:\Savina\Mobilni ustroistva\app\build\generated\res\pngs\debug
+com.example.readingjournal.app-resValues-1 C:\Savina\Mobilni ustroistva\app\build\generated\res\resValues\debug
+com.example.readingjournal.app-updated_navigation_xml-2 C:\Savina\Mobilni ustroistva\app\build\generated\updated_navigation_xml\debug
+com.example.readingjournal.app-packageDebugResources-3 C:\Savina\Mobilni ustroistva\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.readingjournal.app-packageDebugResources-4 C:\Savina\Mobilni ustroistva\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.readingjournal.app-debug-5 C:\Savina\Mobilni ustroistva\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.readingjournal.app-debug-6 C:\Savina\Mobilni ustroistva\app\src\debug\res
+com.example.readingjournal.app-main-7 C:\Savina\Mobilni ustroistva\app\src\main\res
+com.example.readingjournal.app-fragment-1.5.4-8 C:\Users\S-USER\.gradle\caches\8.13\transforms\017f227d52d8b1a87b582e034819209f\transformed\fragment-1.5.4\res
+com.example.readingjournal.app-graphics-path-1.0.1-9 C:\Users\S-USER\.gradle\caches\8.13\transforms\034f696ec81db128dcc08eb5735733d7\transformed\graphics-path-1.0.1\res
+com.example.readingjournal.app-ui-test-manifest-1.9.2-10 C:\Users\S-USER\.gradle\caches\8.13\transforms\05349a49eab402aa6a82301560c265e4\transformed\ui-test-manifest-1.9.2\res
+com.example.readingjournal.app-emoji2-1.4.0-11 C:\Users\S-USER\.gradle\caches\8.13\transforms\06c4c4c9b3541b5a897243c7c9dcd69c\transformed\emoji2-1.4.0\res
+com.example.readingjournal.app-activity-ktx-1.12.1-12 C:\Users\S-USER\.gradle\caches\8.13\transforms\097aaded609babee9049005f2c17fb8a\transformed\activity-ktx-1.12.1\res
+com.example.readingjournal.app-viewpager2-1.0.0-13 C:\Users\S-USER\.gradle\caches\8.13\transforms\0c4b13587ebf859f14a386c9787440cd\transformed\viewpager2-1.0.0\res
+com.example.readingjournal.app-customview-poolingcontainer-1.0.0-14 C:\Users\S-USER\.gradle\caches\8.13\transforms\0c79c8f02fa4813771b00e7405d6eaf2\transformed\customview-poolingcontainer-1.0.0\res
+com.example.readingjournal.app-core-ktx-1.17.0-15 C:\Users\S-USER\.gradle\caches\8.13\transforms\12d71dc58225734db479b38e0bff5943\transformed\core-ktx-1.17.0\res
+com.example.readingjournal.app-material-ripple-release-16 C:\Users\S-USER\.gradle\caches\8.13\transforms\142a1b8c05185e25a0b6459b165a8f1a\transformed\material-ripple-release\res
+com.example.readingjournal.app-recyclerview-1.1.0-17 C:\Users\S-USER\.gradle\caches\8.13\transforms\195a9c0a5948257d16c33938d8b144ff\transformed\recyclerview-1.1.0\res
+com.example.readingjournal.app-lifecycle-livedata-core-2.10.0-18 C:\Users\S-USER\.gradle\caches\8.13\transforms\1a53527768ae7d05dab4ce1852814944\transformed\lifecycle-livedata-core-2.10.0\res
+com.example.readingjournal.app-lifecycle-livedata-2.10.0-19 C:\Users\S-USER\.gradle\caches\8.13\transforms\28f172b19dbe7503a6177ce31c8af9e6\transformed\lifecycle-livedata-2.10.0\res
+com.example.readingjournal.app-lifecycle-viewmodel-ktx-2.10.0-20 C:\Users\S-USER\.gradle\caches\8.13\transforms\2af04cd29d50e783eec1c2161250a540\transformed\lifecycle-viewmodel-ktx-2.10.0\res
+com.example.readingjournal.app-material-icons-core-release-21 C:\Users\S-USER\.gradle\caches\8.13\transforms\2ca9face22123985dc486fdfa5439b64\transformed\material-icons-core-release\res
+com.example.readingjournal.app-appcompat-resources-1.7.0-22 C:\Users\S-USER\.gradle\caches\8.13\transforms\2d12b5aaf6f20eded6128cbe2cc5f7b1\transformed\appcompat-resources-1.7.0\res
+com.example.readingjournal.app-activity-compose-1.12.1-23 C:\Users\S-USER\.gradle\caches\8.13\transforms\2e5381bb47cf41cfa3c98004d3e93ddb\transformed\activity-compose-1.12.1\res
+com.example.readingjournal.app-constraintlayout-2.1.4-24 C:\Users\S-USER\.gradle\caches\8.13\transforms\2fddc073aea1c75c2e47b55beb65a59c\transformed\constraintlayout-2.1.4\res
+com.example.readingjournal.app-savedstate-ktx-1.4.0-25 C:\Users\S-USER\.gradle\caches\8.13\transforms\34692cc61d36255856ce2d85010b937a\transformed\savedstate-ktx-1.4.0\res
+com.example.readingjournal.app-material-1.12.0-26 C:\Users\S-USER\.gradle\caches\8.13\transforms\3c65349fd8cf7ed7418256e212c35557\transformed\material-1.12.0\res
+com.example.readingjournal.app-lifecycle-livedata-core-ktx-2.10.0-27 C:\Users\S-USER\.gradle\caches\8.13\transforms\5a53a6034ef02be41c02daf75750b76e\transformed\lifecycle-livedata-core-ktx-2.10.0\res
+com.example.readingjournal.app-foundation-release-28 C:\Users\S-USER\.gradle\caches\8.13\transforms\642f794aee7d0636a2fb32a9bf5f41d9\transformed\foundation-release\res
+com.example.readingjournal.app-navigationevent-29 C:\Users\S-USER\.gradle\caches\8.13\transforms\736f2905fdfdf71da9551f47b1a0c565\transformed\navigationevent\res
+com.example.readingjournal.app-cardview-1.0.0-30 C:\Users\S-USER\.gradle\caches\8.13\transforms\73d854c9d9d0237c79941474bae0089d\transformed\cardview-1.0.0\res
+com.example.readingjournal.app-startup-runtime-1.1.1-31 C:\Users\S-USER\.gradle\caches\8.13\transforms\77d2e74d40377c5aec77bb6767aa4b31\transformed\startup-runtime-1.1.1\res
+com.example.readingjournal.app-transition-1.5.0-32 C:\Users\S-USER\.gradle\caches\8.13\transforms\7b60eee5179b5a8f8741873b35606578\transformed\transition-1.5.0\res
+com.example.readingjournal.app-core-runtime-2.2.0-33 C:\Users\S-USER\.gradle\caches\8.13\transforms\7b7b2e3e8e9680525d95b529f2c55bab\transformed\core-runtime-2.2.0\res
+com.example.readingjournal.app-ui-release-34 C:\Users\S-USER\.gradle\caches\8.13\transforms\87e30260c7931b82529ad8e938bfece0\transformed\ui-release\res
+com.example.readingjournal.app-lifecycle-process-2.10.0-35 C:\Users\S-USER\.gradle\caches\8.13\transforms\8c4fb69d4924296f4ec033d1c8b8b219\transformed\lifecycle-process-2.10.0\res
+com.example.readingjournal.app-material3-release-36 C:\Users\S-USER\.gradle\caches\8.13\transforms\9b58a39102930a0176e4ef8b41b21db3\transformed\material3-release\res
+com.example.readingjournal.app-ui-graphics-release-37 C:\Users\S-USER\.gradle\caches\8.13\transforms\9bcbda7e79868fd8e1bd37cc6b86a046\transformed\ui-graphics-release\res
+com.example.readingjournal.app-drawerlayout-1.1.1-38 C:\Users\S-USER\.gradle\caches\8.13\transforms\9d2902d9a79a522745614ecd8fee003f\transformed\drawerlayout-1.1.1\res
+com.example.readingjournal.app-activity-1.12.1-39 C:\Users\S-USER\.gradle\caches\8.13\transforms\a0f9535b4c258e43b2f1b1c7de173024\transformed\activity-1.12.1\res
+com.example.readingjournal.app-appcompat-1.7.0-40 C:\Users\S-USER\.gradle\caches\8.13\transforms\a3208f17b6c3b4cba75bfdff16416f4d\transformed\appcompat-1.7.0\res
+com.example.readingjournal.app-lifecycle-viewmodel-41 C:\Users\S-USER\.gradle\caches\8.13\transforms\aad8c1f60e1caa0d8f4607977afc7be7\transformed\lifecycle-viewmodel\res
+com.example.readingjournal.app-annotation-experimental-1.5.0-42 C:\Users\S-USER\.gradle\caches\8.13\transforms\adde0888a84c3192dda2c7aac0035ba8\transformed\annotation-experimental-1.5.0\res
+com.example.readingjournal.app-coordinatorlayout-1.1.0-43 C:\Users\S-USER\.gradle\caches\8.13\transforms\b1c5317dcbafe72b350136ddbc96dd7c\transformed\coordinatorlayout-1.1.0\res
+com.example.readingjournal.app-room-ktx-2.8.4-44 C:\Users\S-USER\.gradle\caches\8.13\transforms\b825e7a4566d719bcd070f16bdd9c37c\transformed\room-ktx-2.8.4\res
+com.example.readingjournal.app-lifecycle-runtime-45 C:\Users\S-USER\.gradle\caches\8.13\transforms\c73e3a3b492cf30a20a978cdd6158853\transformed\lifecycle-runtime\res
+com.example.readingjournal.app-tracing-1.2.0-46 C:\Users\S-USER\.gradle\caches\8.13\transforms\cd3b2a80ead775a85ea43bca1511777e\transformed\tracing-1.2.0\res
+com.example.readingjournal.app-emoji2-views-helper-1.4.0-47 C:\Users\S-USER\.gradle\caches\8.13\transforms\d6518807f0d643b8f252bdaa9f328214\transformed\emoji2-views-helper-1.4.0\res
+com.example.readingjournal.app-core-viewtree-1.0.0-48 C:\Users\S-USER\.gradle\caches\8.13\transforms\d67fcfcdc95c883079aa3eae4caef9c5\transformed\core-viewtree-1.0.0\res
+com.example.readingjournal.app-lifecycle-livedata-ktx-2.10.0-49 C:\Users\S-USER\.gradle\caches\8.13\transforms\d80a62faa81aeb580730fd5291aaa932\transformed\lifecycle-livedata-ktx-2.10.0\res
+com.example.readingjournal.app-savedstate-50 C:\Users\S-USER\.gradle\caches\8.13\transforms\e5ea4c7358b9569886fb01111b7ea56b\transformed\savedstate\res
+com.example.readingjournal.app-profileinstaller-1.4.0-51 C:\Users\S-USER\.gradle\caches\8.13\transforms\ea8c3403ed5deff72e23d0a9f8fb308f\transformed\profileinstaller-1.4.0\res
+com.example.readingjournal.app-material-release-52 C:\Users\S-USER\.gradle\caches\8.13\transforms\ef21c7da7ffdbae5c9c0ac138e0f0af9\transformed\material-release\res
+com.example.readingjournal.app-core-1.17.0-53 C:\Users\S-USER\.gradle\caches\8.13\transforms\fceb50fcdd9269958b344432981e0131\transformed\core-1.17.0\res

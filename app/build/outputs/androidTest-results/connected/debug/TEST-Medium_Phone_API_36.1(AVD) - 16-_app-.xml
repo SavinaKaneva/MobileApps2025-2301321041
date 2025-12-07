@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.readingjournal.AddBookTest" tests="1" failures="0" errors="0" skipped="0" time="13.482" timestamp="2025-12-07T16:35:16" hostname="localhost">
+  <properties>
+    <property name="device" value="Medium_Phone_API_36.1(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="addNewBook_isDisplayedInList" classname="com.example.readingjournal.AddBookTest" time="11.708" />
+</testsuite>

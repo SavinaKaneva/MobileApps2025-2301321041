@@ -1,0 +1,31 @@
+com.example.readingjournal.test.app-androidTest-0 C:\Savina\Mobilni ustroistva\app\build\generated\res\resValues\androidTest\debug
+com.example.readingjournal.test.app-updated_navigation_xml-1 C:\Savina\Mobilni ustroistva\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.example.readingjournal.test.app-mergeDebugAndroidTestResources-2 C:\Savina\Mobilni ustroistva\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.readingjournal.test.app-mergeDebugAndroidTestResources-3 C:\Savina\Mobilni ustroistva\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.readingjournal.test.app-debugAndroidTest-4 C:\Savina\Mobilni ustroistva\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.example.readingjournal.test.app-graphics-path-1.0.1-5 C:\Users\S-USER\.gradle\caches\8.13\transforms\034f696ec81db128dcc08eb5735733d7\transformed\graphics-path-1.0.1\res
+com.example.readingjournal.test.app-emoji2-1.4.0-6 C:\Users\S-USER\.gradle\caches\8.13\transforms\06c4c4c9b3541b5a897243c7c9dcd69c\transformed\emoji2-1.4.0\res
+com.example.readingjournal.test.app-activity-ktx-1.12.1-7 C:\Users\S-USER\.gradle\caches\8.13\transforms\097aaded609babee9049005f2c17fb8a\transformed\activity-ktx-1.12.1\res
+com.example.readingjournal.test.app-customview-poolingcontainer-1.0.0-8 C:\Users\S-USER\.gradle\caches\8.13\transforms\0c79c8f02fa4813771b00e7405d6eaf2\transformed\customview-poolingcontainer-1.0.0\res
+com.example.readingjournal.test.app-core-ktx-1.17.0-9 C:\Users\S-USER\.gradle\caches\8.13\transforms\12d71dc58225734db479b38e0bff5943\transformed\core-ktx-1.17.0\res
+com.example.readingjournal.test.app-lifecycle-livedata-core-2.10.0-10 C:\Users\S-USER\.gradle\caches\8.13\transforms\1a53527768ae7d05dab4ce1852814944\transformed\lifecycle-livedata-core-2.10.0\res
+com.example.readingjournal.test.app-lifecycle-viewmodel-ktx-2.10.0-11 C:\Users\S-USER\.gradle\caches\8.13\transforms\2af04cd29d50e783eec1c2161250a540\transformed\lifecycle-viewmodel-ktx-2.10.0\res
+com.example.readingjournal.test.app-activity-compose-1.12.1-12 C:\Users\S-USER\.gradle\caches\8.13\transforms\2e5381bb47cf41cfa3c98004d3e93ddb\transformed\activity-compose-1.12.1\res
+com.example.readingjournal.test.app-savedstate-ktx-1.4.0-13 C:\Users\S-USER\.gradle\caches\8.13\transforms\34692cc61d36255856ce2d85010b937a\transformed\savedstate-ktx-1.4.0\res
+com.example.readingjournal.test.app-ui-test-release-14 C:\Users\S-USER\.gradle\caches\8.13\transforms\699057cab61e80fb9cb2590eae17517d\transformed\ui-test-release\res
+com.example.readingjournal.test.app-navigationevent-15 C:\Users\S-USER\.gradle\caches\8.13\transforms\736f2905fdfdf71da9551f47b1a0c565\transformed\navigationevent\res
+com.example.readingjournal.test.app-startup-runtime-1.1.1-16 C:\Users\S-USER\.gradle\caches\8.13\transforms\77d2e74d40377c5aec77bb6767aa4b31\transformed\startup-runtime-1.1.1\res
+com.example.readingjournal.test.app-core-runtime-2.2.0-17 C:\Users\S-USER\.gradle\caches\8.13\transforms\7b7b2e3e8e9680525d95b529f2c55bab\transformed\core-runtime-2.2.0\res
+com.example.readingjournal.test.app-ui-release-18 C:\Users\S-USER\.gradle\caches\8.13\transforms\87e30260c7931b82529ad8e938bfece0\transformed\ui-release\res
+com.example.readingjournal.test.app-lifecycle-process-2.10.0-19 C:\Users\S-USER\.gradle\caches\8.13\transforms\8c4fb69d4924296f4ec033d1c8b8b219\transformed\lifecycle-process-2.10.0\res
+com.example.readingjournal.test.app-ui-graphics-release-20 C:\Users\S-USER\.gradle\caches\8.13\transforms\9bcbda7e79868fd8e1bd37cc6b86a046\transformed\ui-graphics-release\res
+com.example.readingjournal.test.app-activity-1.12.1-21 C:\Users\S-USER\.gradle\caches\8.13\transforms\a0f9535b4c258e43b2f1b1c7de173024\transformed\activity-1.12.1\res
+com.example.readingjournal.test.app-lifecycle-viewmodel-22 C:\Users\S-USER\.gradle\caches\8.13\transforms\aad8c1f60e1caa0d8f4607977afc7be7\transformed\lifecycle-viewmodel\res
+com.example.readingjournal.test.app-annotation-experimental-1.5.0-23 C:\Users\S-USER\.gradle\caches\8.13\transforms\adde0888a84c3192dda2c7aac0035ba8\transformed\annotation-experimental-1.5.0\res
+com.example.readingjournal.test.app-lifecycle-runtime-24 C:\Users\S-USER\.gradle\caches\8.13\transforms\c73e3a3b492cf30a20a978cdd6158853\transformed\lifecycle-runtime\res
+com.example.readingjournal.test.app-core-1.7.0-25 C:\Users\S-USER\.gradle\caches\8.13\transforms\cbbb576c2914f2a2c038f18f02cea81e\transformed\core-1.7.0\res
+com.example.readingjournal.test.app-tracing-1.2.0-26 C:\Users\S-USER\.gradle\caches\8.13\transforms\cd3b2a80ead775a85ea43bca1511777e\transformed\tracing-1.2.0\res
+com.example.readingjournal.test.app-core-viewtree-1.0.0-27 C:\Users\S-USER\.gradle\caches\8.13\transforms\d67fcfcdc95c883079aa3eae4caef9c5\transformed\core-viewtree-1.0.0\res
+com.example.readingjournal.test.app-savedstate-28 C:\Users\S-USER\.gradle\caches\8.13\transforms\e5ea4c7358b9569886fb01111b7ea56b\transformed\savedstate\res
+com.example.readingjournal.test.app-profileinstaller-1.4.0-29 C:\Users\S-USER\.gradle\caches\8.13\transforms\ea8c3403ed5deff72e23d0a9f8fb308f\transformed\profileinstaller-1.4.0\res
+com.example.readingjournal.test.app-core-1.17.0-30 C:\Users\S-USER\.gradle\caches\8.13\transforms\fceb50fcdd9269958b344432981e0131\transformed\core-1.17.0\res

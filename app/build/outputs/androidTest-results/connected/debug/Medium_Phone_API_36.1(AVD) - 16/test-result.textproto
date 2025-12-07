@@ -1,0 +1,77 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2025-12-07T16:35:16.787924500Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 1
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "AddBookTest"
+    test_package: "com.example.readingjournal"
+    test_method: "addNewBook_isDisplayedInList"
+    start_time {
+      seconds: 1765125303
+      nanos: 156000000
+    }
+    end_time {
+      seconds: 1765125315
+      nanos: 66000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Savina\\Mobilni ustroistva\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone_API_36.1(AVD) - 16\\logcat-com.example.readingjournal.AddBookTest-addNewBook_isDisplayedInList.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Savina\\Mobilni ustroistva\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone_API_36.1(AVD) - 16\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Savina\\Mobilni ustroistva\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone_API_36.1(AVD) - 16\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Savina\\Mobilni ustroistva\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone_API_36.1(AVD) - 16\\cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "C:\\Savina\\Mobilni ustroistva\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone_API_36.1(AVD) - 16\\testlog\\test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
