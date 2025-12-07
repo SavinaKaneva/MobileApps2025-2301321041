@@ -67,10 +67,9 @@ class UpdateActivity : AppCompatActivity() {
             card.strokeWidth = 6
             card.strokeColor = getColor(R.color.journal_primary)
 
-            Toast.makeText(this, "Цвят избран!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Colour picked!", Toast.LENGTH_SHORT).show()
         }
 
-        // Слушатели - тук подаваме и самата карта, за да я маркираме
         cardDefault.setOnClickListener { pickColor(cardDefault, Color.parseColor("#FFF8E1")) }
         cardRed.setOnClickListener { pickColor(cardRed, Color.parseColor("#FFCDD2")) }
         cardGreen.setOnClickListener { pickColor(cardGreen, Color.parseColor("#C8E6C9")) }
@@ -97,10 +96,10 @@ class UpdateActivity : AppCompatActivity() {
             if (title.isNotEmpty()) {
                 val updatedBook = Book(currentBook.id, title, author, pages, rating, review, selectedColor)
                 mBookViewModel.updateBook(updatedBook)
-                Toast.makeText(this, "Успешно обновено!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Added successfully!", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                Toast.makeText(this, "Попълнете заглавие", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Fill in the title.", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -108,7 +107,7 @@ class UpdateActivity : AppCompatActivity() {
     }
 
     private fun highlightSelectedColor(color: Int) {
-        val defaultColor = Color.parseColor("#FFFFFF")
+        val defaultColor = Color.parseColor("#FFF8E1")
         val redColor = Color.parseColor("#FFCDD2")
         val greenColor = Color.parseColor("#C8E6C9")
         val blueColor = Color.parseColor("#BBDEFB")
@@ -128,14 +127,14 @@ class UpdateActivity : AppCompatActivity() {
 
     private fun deleteUser() {
         val builder = AlertDialog.Builder(this)
-        builder.setPositiveButton("Да") { _, _ ->
+        builder.setPositiveButton("Yes") { _, _ ->
             mBookViewModel.deleteBook(currentBook)
-            Toast.makeText(this, "Изтрито", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Deleted.", Toast.LENGTH_SHORT).show()
             finish()
         }
-        builder.setNegativeButton("Не") { _, _ -> }
-        builder.setTitle("Изтриване?")
-        builder.setMessage("Сигурни ли сте?")
+        builder.setNegativeButton("No") { _, _ -> }
+        builder.setTitle("Deleting?")
+        builder.setMessage("Are you sure?")
         builder.create().show()
     }
 
@@ -146,6 +145,6 @@ class UpdateActivity : AppCompatActivity() {
             putExtra(Intent.EXTRA_TEXT, shareText)
             type = "text/plain"
         }
-        startActivity(Intent.createChooser(sendIntent, "Сподели:"))
+        startActivity(Intent.createChooser(sendIntent, "Share:"))
     }
 }

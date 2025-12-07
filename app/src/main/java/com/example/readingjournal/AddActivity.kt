@@ -44,7 +44,7 @@ class AddActivity : AppCompatActivity() {
         fun pickColor(card: MaterialCardView, color: Int) {
             selectedColor = color
             highlightCard(card)
-            Toast.makeText(this, "Цвят избран!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Colour picked!", Toast.LENGTH_SHORT).show()
         }
 
         cardDefault.setOnClickListener { pickColor(cardDefault, Color.parseColor("#FFF8E1")) }
@@ -84,10 +84,10 @@ class AddActivity : AppCompatActivity() {
             val book = Book(0, title, author, pages, rating, review, selectedColor)
 
             mBookViewModel.addBook(book)
-            Toast.makeText(this, "Книгата е добавена!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Book added successfully!", Toast.LENGTH_LONG).show()
             finish()
         } else {
-            Toast.makeText(this, "Моля попълнете всички полета.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Please, fill in all the information.", Toast.LENGTH_LONG).show()
         }
     }
 
