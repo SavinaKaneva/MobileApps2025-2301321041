@@ -9,13 +9,15 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.cardview.widget.CardView
+import com.google.android.material.card.MaterialCardView
 
 class UpdateActivity : AppCompatActivity() {
 
     private lateinit var mBookViewModel: BookViewModel
     private lateinit var currentBook: Book
-    private var selectedColor: Int = -1
+    private var selectedColor: Int = Color.parseColor("#FFF8E1")
+
+    private lateinit var colorCards: List<MaterialCardView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +35,13 @@ class UpdateActivity : AppCompatActivity() {
         val btnBack = findViewById<Button>(R.id.btnBack)
         val btnShare = findViewById<Button>(R.id.btnShare)
 
-        // Намираме картите
-        val cardDefault = findViewById<CardView>(R.id.colorDefault)
-        val cardRed = findViewById<CardView>(R.id.colorRed)
-        val cardGreen = findViewById<CardView>(R.id.colorGreen)
-        val cardBlue = findViewById<CardView>(R.id.colorBlue)
-        val cardPurple = findViewById<CardView>(R.id.colorPurple)
+        val cardDefault = findViewById<MaterialCardView>(R.id.colorDefault)
+        val cardRed = findViewById<MaterialCardView>(R.id.colorRed)
+        val cardGreen = findViewById<MaterialCardView>(R.id.colorGreen)
+        val cardBlue = findViewById<MaterialCardView>(R.id.colorBlue)
+        val cardPurple = findViewById<MaterialCardView>(R.id.colorPurple)
+
+        colorCards = listOf(cardDefault, cardRed, cardGreen, cardBlue, cardPurple)
 
         if (intent.hasExtra("current_book")) {
             currentBook = intent.getParcelableExtra("current_book")!!
@@ -47,19 +50,32 @@ class UpdateActivity : AppCompatActivity() {
             etPages.setText(currentBook.pages.toString())
             etRating.setText(currentBook.rating.toString())
             etReview.setText(currentBook.review)
+
             selectedColor = currentBook.color
+
+            highlightSelectedColor(selectedColor)
         }
 
-        fun pickColor(color: Int) {
+        fun pickColor(card: MaterialCardView, color: Int) {
             selectedColor = color
-            Toast.makeText(this, "Colour picked!", Toast.LENGTH_SHORT).show()
+
+            colorCards.forEach {
+                it.strokeWidth = 2
+                it.strokeColor = getColor(R.color.stroke_color)
+            }
+
+            card.strokeWidth = 6
+            card.strokeColor = getColor(R.color.journal_primary)
+
+            Toast.makeText(this, "Цвят избран!", Toast.LENGTH_SHORT).show()
         }
 
-        cardDefault.setOnClickListener { pickColor(Color.parseColor("#FFF8E1")) }
-        cardRed.setOnClickListener { pickColor(Color.parseColor("#FFCDD2")) }
-        cardGreen.setOnClickListener { pickColor(Color.parseColor("#C8E6C9")) }
-        cardBlue.setOnClickListener { pickColor(Color.parseColor("#BBDEFB")) }
-        cardPurple.setOnClickListener { pickColor(Color.parseColor("#E1BEE7")) }
+        // Слушатели - тук подаваме и самата карта, за да я маркираме
+        cardDefault.setOnClickListener { pickColor(cardDefault, Color.parseColor("#FFF8E1")) }
+        cardRed.setOnClickListener { pickColor(cardRed, Color.parseColor("#FFCDD2")) }
+        cardGreen.setOnClickListener { pickColor(cardGreen, Color.parseColor("#C8E6C9")) }
+        cardBlue.setOnClickListener { pickColor(cardBlue, Color.parseColor("#BBDEFB")) }
+        cardPurple.setOnClickListener { pickColor(cardPurple, Color.parseColor("#E1BEE7")) }
 
         btnBack.setOnClickListener { finish() }
 
@@ -81,14 +97,33 @@ class UpdateActivity : AppCompatActivity() {
             if (title.isNotEmpty()) {
                 val updatedBook = Book(currentBook.id, title, author, pages, rating, review, selectedColor)
                 mBookViewModel.updateBook(updatedBook)
-                Toast.makeText(this, "Added successfully!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Успешно обновено!", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                Toast.makeText(this, "Fill in the title", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Попълнете заглавие", Toast.LENGTH_SHORT).show()
             }
         }
 
         btnDelete.setOnClickListener { deleteUser() }
+    }
+
+    private fun highlightSelectedColor(color: Int) {
+        val defaultColor = Color.parseColor("#FFFFFF")
+        val redColor = Color.parseColor("#FFCDD2")
+        val greenColor = Color.parseColor("#C8E6C9")
+        val blueColor = Color.parseColor("#BBDEFB")
+        val purpleColor = Color.parseColor("#E1BEE7")
+
+        val targetCard = when (color) {
+            redColor -> colorCards[1]
+            greenColor -> colorCards[2]
+            blueColor -> colorCards[3]
+            purpleColor -> colorCards[4]
+            else -> colorCards[0]
+        }
+
+        targetCard.strokeWidth = 6
+        targetCard.strokeColor = getColor(R.color.journal_primary)
     }
 
     private fun deleteUser() {

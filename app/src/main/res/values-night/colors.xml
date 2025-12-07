@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="journal_primary">#A1887F</color>
+    <color name="journal_secondary">#4E342E</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_hint">#9E9E9E</color>
+    <color name="screen_background">#121212</color>
+    <color name="card_bg">#2C2C2C</color>
+    <color name="stroke_color">#606060</color>
+
+    <color name="btn_action_medium">#8D6E63</color>
+    <color name="btn_update_light">#A1887F</color>
+    <color name="btn_share_darker">#6D4C41</color>
+    <color name="btn_delete_dark">#4E342E</color>
+    <color name="btn_back_gray">#616161</color>
+</resources>

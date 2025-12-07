@@ -7,13 +7,15 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.cardview.widget.CardView
+import com.google.android.material.card.MaterialCardView
 
 class AddActivity : AppCompatActivity() {
 
     private lateinit var mBookViewModel: BookViewModel
 
     private var selectedColor: Int = Color.parseColor("#FFF8E1")
+
+    private lateinit var colorCards: List<MaterialCardView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,28 +31,43 @@ class AddActivity : AppCompatActivity() {
         val btnAdd = findViewById<Button>(R.id.btnAdd)
         val btnCancel = findViewById<Button>(R.id.btnCancel)
 
-        val cardDefault = findViewById<CardView>(R.id.colorDefault)
-        val cardRed = findViewById<CardView>(R.id.colorRed)
-        val cardGreen = findViewById<CardView>(R.id.colorGreen)
-        val cardBlue = findViewById<CardView>(R.id.colorBlue)
-        val cardPurple = findViewById<CardView>(R.id.colorPurple)
+        val cardDefault = findViewById<MaterialCardView>(R.id.colorDefault)
+        val cardRed = findViewById<MaterialCardView>(R.id.colorRed)
+        val cardGreen = findViewById<MaterialCardView>(R.id.colorGreen)
+        val cardBlue = findViewById<MaterialCardView>(R.id.colorBlue)
+        val cardPurple = findViewById<MaterialCardView>(R.id.colorPurple)
 
-        fun pickColor(color: Int) {
+        colorCards = listOf(cardDefault, cardRed, cardGreen, cardBlue, cardPurple)
+
+        highlightCard(cardDefault)
+
+        fun pickColor(card: MaterialCardView, color: Int) {
             selectedColor = color
-            Toast.makeText(this, "Colour picked!", Toast.LENGTH_SHORT).show()
+            highlightCard(card)
+            Toast.makeText(this, "Цвят избран!", Toast.LENGTH_SHORT).show()
         }
 
-        cardDefault.setOnClickListener { pickColor(Color.parseColor("#FFF8E1")) }
-        cardRed.setOnClickListener { pickColor(Color.parseColor("#FFCDD2")) }
-        cardGreen.setOnClickListener { pickColor(Color.parseColor("#C8E6C9")) }
-        cardBlue.setOnClickListener { pickColor(Color.parseColor("#BBDEFB")) }
-        cardPurple.setOnClickListener { pickColor(Color.parseColor("#E1BEE7")) }
+        cardDefault.setOnClickListener { pickColor(cardDefault, Color.parseColor("#FFF8E1")) }
+        cardRed.setOnClickListener { pickColor(cardRed, Color.parseColor("#FFCDD2")) }
+        cardGreen.setOnClickListener { pickColor(cardGreen, Color.parseColor("#C8E6C9")) }
+        cardBlue.setOnClickListener { pickColor(cardBlue, Color.parseColor("#BBDEFB")) }
+        cardPurple.setOnClickListener { pickColor(cardPurple, Color.parseColor("#E1BEE7")) }
 
         btnCancel.setOnClickListener { finish() }
 
         btnAdd.setOnClickListener {
             insertDataToDatabase(etTitle, etAuthor, etPages, etRating, etReview)
         }
+    }
+
+    private fun highlightCard(activeCard: MaterialCardView) {
+        colorCards.forEach {
+            it.strokeWidth = 2
+            it.strokeColor = getColor(R.color.stroke_color)
+        }
+
+        activeCard.strokeWidth = 6
+        activeCard.strokeColor = getColor(R.color.journal_primary)
     }
 
     private fun insertDataToDatabase(etTitle: EditText, etAuthor: EditText, etPages: EditText, etRating: EditText, etReview: EditText) {
@@ -67,10 +84,10 @@ class AddActivity : AppCompatActivity() {
             val book = Book(0, title, author, pages, rating, review, selectedColor)
 
             mBookViewModel.addBook(book)
-            Toast.makeText(this, "Book added successfully!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Книгата е добавена!", Toast.LENGTH_LONG).show()
             finish()
         } else {
-            Toast.makeText(this, "Please, fill up all the information.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Моля попълнете всички полета.", Toast.LENGTH_LONG).show()
         }
     }
 
