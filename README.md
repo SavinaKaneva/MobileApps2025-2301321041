@@ -45,11 +45,17 @@
 
 Приложението **не изисква регистрация**. Няма потребителски имена и пароли. Всичко се пази локално на вашето устройство.
 
-## Скрийншотове
+## Начална страница (Main Activity)
+<img width="347" height="769" alt="Screenshot 2025-12-07 150329" src="https://github.com/user-attachments/assets/141904d6-5f02-4e53-aa48-d3b2fd6c9632" />
+<img width="342" height="773" alt="Screenshot 2025-12-07 150503" src="https://github.com/user-attachments/assets/c9fe2eef-abef-40df-9682-bd3c872d65a4" />
 
-| Начален екран | Добавяне на книга | Тъмна тема |
-|:---:|:---:|:---:|
-| ![Home Screen](screenshots/home.png) | ![Add Screen](screenshots/add.png) | ![Dark Mode](screenshots/dark.png) |
+## Страница за добавяне на книга (Add Activity)
+<img width="346" height="768" alt="Screenshot 2025-12-07 150553" src="https://github.com/user-attachments/assets/fe4e3058-562e-4d15-91c2-1b884d8099eb" />
+<img width="348" height="768" alt="Screenshot 2025-12-07 154343" src="https://github.com/user-attachments/assets/7f629f7b-8857-48e8-ad8f-ab37b293338c" />
+
+## Страница за обновяване на информация за книга (Update Activity)
+<img width="345" height="768" alt="Screenshot 2025-12-07 154553" src="https://github.com/user-attachments/assets/3421ac66-62b4-4608-a982-d57cab8529eb" />
+<img width="341" height="768" alt="Screenshot 2025-12-07 154626" src="https://github.com/user-attachments/assets/ab6a5ecb-c333-4d0d-aafc-ad5f9b225d3f" />
 
 ## APK
 
